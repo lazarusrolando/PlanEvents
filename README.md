@@ -113,7 +113,7 @@ plan-events/
 |-------|-------------|----------|--------------|
 | Frontend | React | 19.2.0 | SPA with modern UI |
 | Frontend | Material-UI | 7.3.4 | Component styling & theme |
-| Backend | Flask | 2.x | RESTful API |
+| Backend | Flask | 3.x | RESTful API |
 | Database | SQLite | 3.x | Embedded lightweight database |
 | Authentication | Node.js + Express | 18.x | JWT-based auth microservice |
 | Visualization | Chart.js / Recharts | 4.5.1 / 3.2.1 | Analytics visualization |
