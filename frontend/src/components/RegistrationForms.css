@@ -1,0 +1,104 @@
+.registration-forms-container {
+  width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in;
+  background-color: #ffffff;
+}
+
+.registration-forms-container h2 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e9ecef;
+  max-width: 600px;
+}
+
+.registration-form label {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-weight: 500;
+  color: #333;
+}
+
+.registration-form input,
+.registration-form select {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  transition: border-color 0.3s;
+}
+
+.registration-form input:focus,
+.registration-form select:focus {
+  outline: none;
+  border-color: #ff6b35;
+}
+
+.submit-button {
+  background: #ff6b35;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.submit-button:hover {
+  background: #e55a2b;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #ff6b35;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.back-link:hover {
+  color: #e55a2b;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .registration-forms-container {
+    padding: 1rem;
+  }
+
+  .registration-form {
+    padding: 1.5rem;
+  }
+}
