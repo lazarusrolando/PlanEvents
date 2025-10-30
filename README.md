@@ -99,11 +99,9 @@ plan-events/
 │   │   ├── App.js
 │   │   ├── index.js
 │   │   └── styles/
-│   ├── package.json
-│   └── README.md
+│   └── package.json
 │
 ├── README.md
-├── TODO.md
 └── LICENSE
 ```
 
