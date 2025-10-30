@@ -6,7 +6,7 @@
 
 <p align="center">
   <strong>A full-stack event management, planning, and ticketing platform.</strong><br/>
-  Built with <a href="https://reactjs.org/">React</a> • <a href="https://flask.palletsprojects.com/">Flask</a> • <a href="https://sqlite.org/">SQLite</a> • <a href="https://nodejs.org/">Node.js</a>
+  Built with <a href="https://reactjs.org/">React</a> • <a href="https://www.python.org/">Python</a> <a href="https://flask.palletsprojects.com/">Flask</a> • <a href="https://sqlite.org/">SQLite</a> • <a href="https://nodejs.org/">Node.js</a>
 </p>
 
 <p align="center">
