@@ -13,7 +13,7 @@
   <a href="https://react.dev/"><img src="https://img.shields.io/badge/React-19.2.0-blue.svg" alt="React Badge"></a>
   <a href="https://flask.palletsprojects.com/"><img src="https://img.shields.io/badge/Flask-3.1.2-blue.svg" alt="Flask Badge"></a>
   <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.14.0-yellow.svg" alt="Python Badge"></a>
-  <a href="https://www.sqlite.org/"><img src="https://img.shields.io/badge/SQLite-3.50.4green.svg" alt="SQLite Badge"></a>
+  <a href="https://www.sqlite.org/"><img src="https://img.shields.io/badge/SQLite-3.50.4-green.svg" alt="SQLite Badge"></a>
   <a href="https://nodejs.org/"><img src="https://img.shields.io/badge/Node.js-24.10.0-green.svg" alt="Node.js Badge"></a>
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT License Badge"></a>
 </p>
