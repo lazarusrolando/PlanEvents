@@ -1,0 +1,251 @@
+.event-details-page {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.event-body {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-top: -2rem; 
+  position: relative;
+  z-index: 1;
+}
+
+.event-container {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.event-info {
+  flex: 1;
+  min-width: 0;
+  background: linear-gradient(to right, #ff7f00, #ff4500);
+  color: #333;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.event-content-block {
+  margin-bottom: 1.5rem;
+}
+
+.event-content-block p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.event-info h2 {
+  font-size: 1.8rem;
+  color: #222;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #ff6b35;
+  padding-bottom: 0.5rem;
+}
+
+.event-bullets {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.event-bullets li {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.event-additional-info {
+  gap: 1rem;
+}
+
+.event-additional-info p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.event-additional-info strong {
+  color: #ff6b35;
+}
+
+.agenda-section {
+  margin-top: 20rem;
+}
+
+.agenda-title {
+  font-size: 1.6rem;
+  color: #ff6b35;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.agenda-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-family: sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  border: 1px solid #e0e0e0;
+}
+
+.agenda-table tr {
+  border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.2s;
+}
+
+.agenda-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+.agenda-time {
+  padding: 1rem 0.75rem;
+  font-weight: bold;
+  width: 20%;
+  vertical-align: top;
+  color: #333;
+  border-right: 1px solid #e0e0e0;
+}
+
+.agenda-topic {
+  padding: 1rem 0.75rem;
+  vertical-align: top;
+  color: #555;
+}
+
+.speakers-section {
+  margin-top: 1.5rem;
+  margin-left: 0;
+  text-align: left;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  color: #ff6b35;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  border-bottom: 2px solid #ff6b35;
+  padding-bottom: 0.5rem;
+}
+
+.speakers-bullets {
+  padding-left: 0;
+  list-style-type: none;
+  margin-left: 0;
+}
+
+.speaker-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  margin-left: 0;
+}
+
+.speaker-name {
+  font-weight: bold;
+  color: #333;
+  min-width: 150px;
+  margin-right: 1rem;
+  font-size: 1rem;
+}
+
+.speaker-bio {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.registration-form {
+  width: 320px;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 0.25rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+}
+
+.register-button {
+  background-color: #007bff;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.register-button:hover {
+  background-color: #0056b3;
+}
+
+.submit-status {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.submit-status.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.submit-status.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .event-body {
+    padding: 1.5rem;
+    margin-top: -1rem;
+  }
+
+  .event-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .event-additional-info {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,108 @@
+.event-preview {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+}
+
+.event-preview-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.event-preview-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.event-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.event-preview-card {
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: #fff;
+  transition: box-shadow 0.3s;
+}
+
+.event-preview-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.event-preview-card h3 {
+  margin-top: 0;
+  color: #ff6b35;
+}
+
+.event-preview-description {
+  margin: 1rem 0;
+  color: #666;
+}
+
+.event-preview-link {
+  color: #ff6b35;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.event-preview-link:hover {
+  text-decoration: underline;
+}
+
+.view-all-events-button {
+  display: block;
+  margin: 0 auto;
+  background-color: #ff6b35;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s;
+  text-align: center;
+  width: fit-content;
+}
+
+.view-all-events-button:hover {
+  background-color: #e55a2b;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .event-preview {
+    padding: 2rem 1rem;
+  }
+
+  .event-preview-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .event-preview-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .event-preview-card {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-preview {
+    padding: 1.5rem 1rem;
+  }
+
+  .event-preview-title {
+    font-size: 1.8rem;
+  }
+
+  .event-preview-card {
+    padding: 0.75rem;
+  }
+}
