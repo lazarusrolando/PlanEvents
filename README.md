@@ -11,7 +11,12 @@
 
 <p align="center">
   <a href="#"><img src="https://img.shields.io/badge/React-19.2.0-blue.svg" alt="React Badge"></a>
-  <a href="#"><img src="https://img.shields.io/badge/Flask-3.1.2-lightgrey.svg" alt="Flask Badge"></a>
+  <a href="https://flask.palletsprojects.com/"><img src="https://img.shields.io/badge/Flask-3.1.2-blue.svg" alt="Flask Badge"></a>
+  <a href="https://www.python.org/">
+  <img src="https://img.shields.io/badge/Python-3.11.4-yellow.svg" alt="Python Badge">
+</a>
+
+  
   <a href="#"><img src="https://img.shields.io/badge/SQLite-3.x-green.svg" alt="SQLite Badge"></a>
   <a href="#"><img src="https://img.shields.io/badge/Node.js-18.x-green.svg" alt="Node.js Badge"></a>
   <a href="#"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT License Badge"></a>
