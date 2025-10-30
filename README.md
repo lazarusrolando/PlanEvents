@@ -141,7 +141,7 @@ Runs on: `http://localhost:5000`
 ```bash
 cd ../backend-auth
 npm install
-npm start
+node .
 ```
 Runs on: `http://localhost:3001`
 
