@@ -241,12 +241,6 @@ TABLE audit_logs (
 
 ---
 
-## 📃 Documentation
-
-**Full Documentation**: [PLANEVENTS](PlanEvents.pdf)
-
----
-
 ## 🧑‍💻 Contributing
 
 We ❤️ community contributions!
