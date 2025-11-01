@@ -243,7 +243,7 @@ TABLE audit_logs (
 
 ## 📃 Documentation
 
-**Full Documentation**: [PLAN EVENTS](Plan Events.pdf)
+**Full Documentation**: [PLAN EVENTS](PlanEvents.pdf)
 
 ## 🧑‍💻 Contributing
 
