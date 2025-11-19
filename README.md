@@ -1,7 +1,7 @@
 # 🗓️ Plan Events
 
 <p align="center">
-  <img src="https://cdn.discordapp.com/attachments/1106453827152007189/1433316987575996517/plan_events.png?ex=69043ff7&is=6902ee77&hm=e586054af838d728e18708efe2a57268399e21bff76c9aaa0eaf54c23e738af5&" alt="Plan Events Logo" width="220"/>
+  <img src="https://raw.githubusercontent.com/lazarusrolando/PlanEvents/refs/heads/main/frontend/public/plan_events.png" alt="Plan Events Logo" width="220"/>
 </p>
 
 <p align="center">
