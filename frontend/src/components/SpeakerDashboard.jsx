@@ -57,6 +57,10 @@ const SpeakerDashboard = () => {
   return (
     <div className="speaker-dashboard">
       <div className="speaker-sidebar">
+        <div className="speaker-sidebar__logo">
+          <span className="speaker-sidebar__logo-text">PlanEvents</span>
+        </div>
+        <p className="speaker-sidebar__section-label">MAIN MENU</p>
         <ul className="speaker-sidebar__menu">
           <li className="speaker-sidebar__group">
             <Link to="/speaker/dashboard" className="speaker-sidebar__item active">
@@ -89,6 +93,12 @@ const SpeakerDashboard = () => {
             </Link>
           </li>
         </ul>
+        <div className="speaker-sidebar__footer">
+          <Link to="/" className="speaker-sidebar__item speaker-sidebar__back">
+            <FontAwesomeIcon icon={faHome} className="speaker-sidebar__icon" />
+            <span className="speaker-sidebar__text">Back to Site</span>
+          </Link>
+        </div>
       </div>
 
       {/* Main Content */}
@@ -96,7 +106,8 @@ const SpeakerDashboard = () => {
         {/* Header */}
         <header className="headers">
           <div className="headers-left">
-            <h1 style={{ textAlign: 'center' }}>Welcome to Speaker Dashboard</h1>
+            <h1>Speaker Dashboard</h1>
+            <p>Track your sessions, preparation timeline, and upcoming appearances.</p>
           </div>
           <div className="headers-right">
             <input
@@ -167,7 +178,11 @@ const SpeakerDashboard = () => {
                   <tr key={event.id}>
                     <td>{event.title}</td>
                     <td>{new Date(event.date).toLocaleDateString()}</td>
-                    <td>{new Date(event.date) > new Date() ? 'Upcoming' : 'Past'}</td>
+                    <td>
+                      <span className={`status-chip ${new Date(event.date) > new Date() ? 'upcoming' : 'past'}`}>
+                        {new Date(event.date) > new Date() ? 'Upcoming' : 'Past'}
+                      </span>
+                    </td>
                   </tr>
                 ))
               ) : (

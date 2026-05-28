@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCalendar, faClipboard, faGears, faHistory, faHome, faPerson, faTicket } from '@fortawesome/free-solid-svg-icons';
 import './Dashboard.css';
 
 const Recents = () => {
@@ -151,16 +153,61 @@ const Recents = () => {
 
      return (
           <div className="dashboard">
-               <nav className="sidebar">
-                    <ul>
-                         <li><Link to="/dashboard"><i className="fa fa-home"></i> Home</Link></li>
-                         <li><Link to="/profile"><i className="fa fa-user"></i> Profile</Link></li>
-                         <li><Link to="/events"><i className="fa fa-calendar"></i> Upcoming Events</Link></li>
-                         <li><Link to="/registrations"><i className="fa fa-ticket"></i> Tickets</Link></li>
-                         <li><Link to="/ticketing/attendance"><i className="fa fa-check"></i> Attendance</Link></li>
-                         <li><Link to="/recents"><i className="fa fa-history"></i> Recents</Link></li>
-                         <li><Link to="/settings"><i className="fa fa-cog"></i> Settings</Link></li>
+               <nav className="speaker-sidebar">
+                    <div className="speaker-sidebar__logo">
+                         <span className="speaker-sidebar__logo-text">PlanEvents</span>
+                    </div>
+                    <p className="speaker-sidebar__section-label">MAIN MENU</p>
+                    <ul className="speaker-sidebar__menu">
+                         <li className="speaker-sidebar__group">
+                              <Link to="/dashboard" className="speaker-sidebar__item active">
+                                   <FontAwesomeIcon icon={faHome} className="speaker-sidebar__icon" />
+                                   <span className="speaker-sidebar__text">Home</span>
+                              </Link>
+                         </li>
+                         <li className="speaker-sidebar__group">
+                              <Link to="/profile" className="speaker-sidebar__item">
+                                   <FontAwesomeIcon icon={faPerson} className="speaker-sidebar__icon" />
+                                   <span className="speaker-sidebar__text">Profile</span>
+                              </Link>
+                         </li>
+                         <li className="speaker-sidebar__group">
+                              <Link to="/events" className="speaker-sidebar__item">
+                                   <FontAwesomeIcon icon={faCalendar} className="speaker-sidebar__icon" />
+                                   <span className="speaker-sidebar__text">Upcoming Events</span>
+                              </Link>
+                         </li>
+                         <li className="speaker-sidebar__group">
+                              <Link to="/registrations" className="speaker-sidebar__item">
+                                   <FontAwesomeIcon icon={faTicket} className="speaker-sidebar__icon" />
+                                   <span className="speaker-sidebar__text">Tickets</span>
+                              </Link>
+                         </li>
+                         <li className="speaker-sidebar__group">
+                              <Link to="/ticketing/attendance" className="speaker-sidebar__item">
+                                   <FontAwesomeIcon icon={faClipboard} className="speaker-sidebar__icon" />
+                                   <span className="speaker-sidebar__text">Attendance</span>
+                              </Link>
+                         </li>
+                         <li className="speaker-sidebar__group">
+                              <Link to="/recents" className="speaker-sidebar__item">
+                                   <FontAwesomeIcon icon={faHistory} className="speaker-sidebar__icon" />
+                                   <span className="speaker-sidebar__text">Recents</span>
+                              </Link>
+                         </li>
+                         <li className="speaker-sidebar__group">
+                              <Link to="/settings" className="speaker-sidebar__item">
+                                   <FontAwesomeIcon icon={faGears} className="speaker-sidebar__icon" />
+                                   <span className="speaker-sidebar__text">Settings</span>
+                              </Link>
+                         </li>
                     </ul>
+                    <div className="speaker-sidebar__footer">
+                         <Link to="/" className="speaker-sidebar__item speaker-sidebar__back">
+                              <FontAwesomeIcon icon={faHome} className="speaker-sidebar__icon" />
+                              <span className="speaker-sidebar__text">Back to Site</span>
+                         </Link>
+                    </div>
                </nav>
 
                {/* Main Content */}

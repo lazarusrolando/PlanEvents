@@ -22,6 +22,12 @@ const AdminDashboardNew = () => {
     setSearchQuery(e.target.value);
   };
 
+  const filteredRecentActivities = recentActivities.filter((activity) =>
+    [activity.action, activity.details, activity.timestamp]
+      .filter(Boolean)
+      .some((value) => String(value).toLowerCase().includes(searchQuery.toLowerCase()))
+  );
+
   useEffect(() => {
     fetchStats();
     fetchRecentActivities();
@@ -69,12 +75,12 @@ const AdminDashboardNew = () => {
 
   return (
     <div className="admin-dashboard-new">
-      <div className="admin-sidebar">
-        <div className="admin-sidebar__logo">
-          <span className="admin-sidebar__logo-text text-center align-center">PlanEvents</span>
+      <div className="speaker-sidebar">
+        <div className="speaker-sidebar__logo">
+          <span className="speaker-sidebar__logo-text text-center align-center">PlanEvents</span>
         </div>
-        <p className="admin-sidebar__section-label">MAIN MENU</p>
-        <ul className="admin-sidebar__menu">
+        <p className="speaker-sidebar__section-label">MAIN MENU</p>
+        <ul className="speaker-sidebar__menu">
           {[
             { to: '/admin/dashboard', icon: faHome,         label: 'Dashboard' },
             { to: '/admin/users',     icon: faUser,         label: 'Users'     },
@@ -86,18 +92,18 @@ const AdminDashboardNew = () => {
             <li key={to}>
               <Link
                 to={to}
-                className={`admin-sidebar__item${window.location.pathname === to ? ' active' : ''}`}
+                className={`speaker-sidebar__item${window.location.pathname === to ? ' active' : ''}`}
               >
-                <FontAwesomeIcon icon={icon} className="admin-sidebar__icon" />
-                <span className="admin-sidebar__text">{label}</span>
+                <FontAwesomeIcon icon={icon} className="speaker-sidebar__icon" />
+                <span className="speaker-sidebar__text">{label}</span>
               </Link>
             </li>
           ))}
         </ul>
-        <div className="admin-sidebar__footer">
-          <Link to="/" className="admin-sidebar__item admin-sidebar__back">
-            <FontAwesomeIcon icon={faHome} className="admin-sidebar__icon" />
-            <span className="admin-sidebar__text">Back to Site</span>
+        <div className="speaker-sidebar__footer">
+          <Link to="/" className="speaker-sidebar__item speaker-sidebar__back">
+            <FontAwesomeIcon icon={faHome} className="speaker-sidebar__icon" />
+            <span className="speaker-sidebar__text">Back to Site</span>
           </Link>
         </div>
       </div>
@@ -142,13 +148,20 @@ const AdminDashboardNew = () => {
               </tr>
             </thead>
             <tbody>
-              {recentActivities.map(activity => (
+              {filteredRecentActivities.map(activity => (
                 <tr key={activity.id}>
                   <td>{activity.action}</td>
                   <td>{activity.details}</td>
                   <td>{activity.timestamp}</td>
                 </tr>
               ))}
+              {filteredRecentActivities.length === 0 && (
+                <tr>
+                  <td colSpan="3" style={{ textAlign: 'center', padding: '20px', color: '#666' }}>
+                    No recent activities found.
+                  </td>
+                </tr>
+              )}
             </tbody>
           </table>
         </div>

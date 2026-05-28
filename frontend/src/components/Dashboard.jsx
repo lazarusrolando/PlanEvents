@@ -42,6 +42,9 @@ const Dashboard = () => {
   const totalPercentage = totalEvents > 0 ? Math.round((registeredEvents.length / totalEvents) * 100) : 0;
   const attendedCount = registeredEvents.filter(e => e.checked_in).length;
   const attendedPercentage = registeredEvents.length > 0 ? Math.round((attendedCount / registeredEvents.length) * 100) : 0;
+  const filteredAvailableEvents = availableEvents.filter((event) =>
+    (event.title || '').toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   if (loading) {
     return <div className="loading">Loading...</div>;
@@ -53,16 +56,61 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard">
-      <nav className="sidebar">
-        <ul>
-          <li><Link to="/dashboard"><FontAwesomeIcon icon={faHome}/> Home</Link></li>
-          <li><Link to="/profile"><FontAwesomeIcon icon={faPerson}/>Profile</Link></li>
-          <li><Link to="/events"><FontAwesomeIcon icon={faCalendar}/> Upcoming Events</Link></li>
-          <li><Link to="/registrations"><FontAwesomeIcon icon={faTicket}/> Tickets</Link></li>
-          <li><Link to="/ticketing/attendance"><FontAwesomeIcon icon={faClipboard} /> Attendance</Link></li>
-          <li><Link to="/recents"><FontAwesomeIcon icon={faHistory} /> Recents</Link></li>
-          <li><Link to="/settings"><FontAwesomeIcon icon={faGears} /> Settings</Link></li>
+      <nav className="speaker-sidebar">
+        <div className="speaker-sidebar__logo">
+          <span className="speaker-sidebar__logo-text">PlanEvents</span>
+        </div>
+        <p className="speaker-sidebar__section-label">MAIN MENU</p>
+        <ul className="speaker-sidebar__menu">
+          <li className="speaker-sidebar__group">
+            <Link to="/dashboard" className="speaker-sidebar__item active">
+              <FontAwesomeIcon icon={faHome} className="speaker-sidebar__icon" />
+              <span className="speaker-sidebar__text">Home</span>
+            </Link>
+          </li>
+          <li className="speaker-sidebar__group">
+            <Link to="/profile" className="speaker-sidebar__item">
+              <FontAwesomeIcon icon={faPerson} className="speaker-sidebar__icon" />
+              <span className="speaker-sidebar__text">Profile</span>
+            </Link>
+          </li>
+          <li className="speaker-sidebar__group">
+            <Link to="/events" className="speaker-sidebar__item">
+              <FontAwesomeIcon icon={faCalendar} className="speaker-sidebar__icon" />
+              <span className="speaker-sidebar__text">Upcoming Events</span>
+            </Link>
+          </li>
+          <li className="speaker-sidebar__group">
+            <Link to="/registrations" className="speaker-sidebar__item">
+              <FontAwesomeIcon icon={faTicket} className="speaker-sidebar__icon" />
+              <span className="speaker-sidebar__text">Tickets</span>
+            </Link>
+          </li>
+          <li className="speaker-sidebar__group">
+            <Link to="/ticketing/attendance" className="speaker-sidebar__item">
+              <FontAwesomeIcon icon={faClipboard} className="speaker-sidebar__icon" />
+              <span className="speaker-sidebar__text">Attendance</span>
+            </Link>
+          </li>
+          <li className="speaker-sidebar__group">
+            <Link to="/recents" className="speaker-sidebar__item">
+              <FontAwesomeIcon icon={faHistory} className="speaker-sidebar__icon" />
+              <span className="speaker-sidebar__text">Recents</span>
+            </Link>
+          </li>
+          <li className="speaker-sidebar__group">
+            <Link to="/settings" className="speaker-sidebar__item">
+              <FontAwesomeIcon icon={faGears} className="speaker-sidebar__icon" />
+              <span className="speaker-sidebar__text">Settings</span>
+            </Link>
+          </li>
         </ul>
+        <div className="speaker-sidebar__footer">
+          <Link to="/" className="speaker-sidebar__item speaker-sidebar__back">
+            <FontAwesomeIcon icon={faHome} className="speaker-sidebar__icon" />
+            <span className="speaker-sidebar__text">Back to Site</span>
+          </Link>
+        </div>
       </nav>
 
       {/* Main Content */}
@@ -84,7 +132,7 @@ const Dashboard = () => {
         </header>
         <div className="available-events-card">
           <h3>Available Events</h3>
-          <p>{availableEvents.length} events available to register for</p>
+          <p>{filteredAvailableEvents.length} events available to register for</p>
           <Link to="/events" className="view-available">View Available Events</Link>
         </div>
 
