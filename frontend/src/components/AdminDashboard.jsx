@@ -70,49 +70,36 @@ const AdminDashboardNew = () => {
   return (
     <div className="admin-dashboard-new">
       <div className="admin-sidebar">
+        <div className="admin-sidebar__logo">
+          <span className="admin-sidebar__logo-text text-center align-center">PlanEvents</span>
+        </div>
+        <p className="admin-sidebar__section-label">MAIN MENU</p>
         <ul className="admin-sidebar__menu">
-          <li className="admin-sidebar__group">
-            <Link to="/admin/dashboard" className="admin-sidebar__item">
-              <FontAwesomeIcon icon={faHome} className="admin-sidebar__icon" />
-              <span className="admin-sidebar__text">Dashboard</span>
-            </Link>
-          </li>
-
-          <li className="admin-sidebar__group">
-            <Link to="/admin/users" className="admin-sidebar__item">
-              <FontAwesomeIcon icon={faUser} className="admin-sidebar__icon" />
-              <span className="admin-sidebar__text">Users</span>
-            </Link>
-          </li>
-
-          <li className="admin-sidebar__group">
-            <Link to="/admin/events" className="admin-sidebar__item">
-              <FontAwesomeIcon icon={faCalendar} className="admin-sidebar__icon" />
-              <span className="admin-sidebar__text">Events</span>
-            </Link>
-          </li>
-
-          <li className="admin-sidebar__group">
-            <Link to="/admin/tickets" className="admin-sidebar__item">
-              <FontAwesomeIcon icon={faTicket} className="admin-sidebar__icon" />
-              <span className="admin-sidebar__text">Tickets</span>
-            </Link>
-          </li>
-
-          <li className="admin-sidebar__group">
-            <Link to="/admin/analytics" className="admin-sidebar__item">
-              <FontAwesomeIcon icon={faChartSimple} className="admin-sidebar__icon" />
-              <span className="admin-sidebar__text">Analytics</span>
-            </Link>
-          </li>
-
-          <li className="admin-sidebar__group">
-            <Link to="/admin/settings" className="admin-sidebar__item">
-              <FontAwesomeIcon icon={faCog} className="admin-sidebar__icon" />
-              <span className="admin-sidebar__text">Settings</span>
-            </Link>
-          </li>
+          {[
+            { to: '/admin/dashboard', icon: faHome,         label: 'Dashboard' },
+            { to: '/admin/users',     icon: faUser,         label: 'Users'     },
+            { to: '/admin/events',    icon: faCalendar,     label: 'Events'    },
+            { to: '/admin/tickets',   icon: faTicket,       label: 'Tickets'   },
+            { to: '/admin/analytics', icon: faChartSimple,  label: 'Analytics' },
+            { to: '/admin/settings',  icon: faCog,          label: 'Settings'  },
+          ].map(({ to, icon, label }) => (
+            <li key={to}>
+              <Link
+                to={to}
+                className={`admin-sidebar__item${window.location.pathname === to ? ' active' : ''}`}
+              >
+                <FontAwesomeIcon icon={icon} className="admin-sidebar__icon" />
+                <span className="admin-sidebar__text">{label}</span>
+              </Link>
+            </li>
+          ))}
         </ul>
+        <div className="admin-sidebar__footer">
+          <Link to="/" className="admin-sidebar__item admin-sidebar__back">
+            <FontAwesomeIcon icon={faHome} className="admin-sidebar__icon" />
+            <span className="admin-sidebar__text">Back to Site</span>
+          </Link>
+        </div>
       </div>
 
       <div className="main-content">
