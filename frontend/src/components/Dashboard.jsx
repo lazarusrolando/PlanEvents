@@ -70,13 +70,13 @@ const Dashboard = () => {
         {/* Header */}
         <header className="headers">
           <div className="headers-left">
-            <h1 style={{ textAlign: 'center' }}>Welcome to User Dashboard</h1>
+            <h1>Welcome to User Dashboard</h1>
           </div>
           <div className="headers-right">
             <input
               type="text"
               className="search-input"
-              placeholder="Search, visualize, and more"
+              placeholder="Search events..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />

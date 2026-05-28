@@ -154,92 +154,47 @@ const EventForm = () => {
           </select>
         </label>
         <div className="speakers-section">
-          <label>
-            Speakers:
-            {speakers.map((speaker, index) => (
-              <div key={index} className="speaker-item">
-                <input
-                  type="text"
-                  value={speaker.name}
-                  onChange={e => {
-                    const newSpeakers = [...speakers];
-                    newSpeakers[index].name = e.target.value;
-                    setSpeakers(newSpeakers);
-                  }}
-                  placeholder="Speaker Name"
-                />
-                <input
-                  type="text"
-                  value={speaker.bio}
-                  onChange={e => {
-                    const newSpeakers = [...speakers];
-                    newSpeakers[index].bio = e.target.value;
-                    setSpeakers(newSpeakers);
-                  }}
-                  placeholder="Speaker Bio"
-                />
-                <button type="button" onClick={() => {
-                  const newSpeakers = speakers.filter((_, i) => i !== index);
-                  setSpeakers(newSpeakers.length > 0 ? newSpeakers : [{ name: '', bio: '' }]);
-                }}>Remove</button>
-              </div>
-            ))}
-          </label>
-          <button type="button" onClick={() => setSpeakers([...speakers, { name: '', bio: '' }])}>Add Speaker</button>
+          <label>Speakers:</label>
+          {speakers.map((speaker, index) => (
+            <div key={index} className="speaker-item">
+              <input
+                type="text"
+                value={speaker.name}
+                onChange={e => { const s = [...speakers]; s[index].name = e.target.value; setSpeakers(s); }}
+                placeholder="Speaker Name"
+              />
+              <input
+                type="text"
+                value={speaker.bio}
+                onChange={e => { const s = [...speakers]; s[index].bio = e.target.value; setSpeakers(s); }}
+                placeholder="Speaker Bio"
+              />
+              <button type="button" onClick={() => { const s = speakers.filter((_, i) => i !== index); setSpeakers(s.length > 0 ? s : [{ name: '', bio: '' }]); }}>Remove</button>
+            </div>
+          ))}
+          <button type="button" className="add-btn" onClick={() => setSpeakers([...speakers, { name: '', bio: '' }])}>Add Speaker</button>
         </div>
         <div className="agenda-section">
-          <label>
-            Agenda:
-            {agenda.map((item, index) => (
-              <div key={index} className="agenda-item">
-                <input
-                  type="time"
-                  value={item.start_time}
-                  onChange={e => {
-                    const newAgenda = [...agenda];
-                    newAgenda[index].start_time = e.target.value;
-                    setAgenda(newAgenda);
-                  }}
-                  placeholder="Start Time"
-                />
-                <input
-                  type="time"
-                  value={item.end_time}
-                  onChange={e => {
-                    const newAgenda = [...agenda];
-                    newAgenda[index].end_time = e.target.value;
-                    setAgenda(newAgenda);
-                  }}
-                  placeholder="End Time"
-                />
-                <input
-                  type="text"
-                  value={item.description}
-                  onChange={e => {
-                    const newAgenda = [...agenda];
-                    newAgenda[index].description = e.target.value;
-                    setAgenda(newAgenda);
-                  }}
-                  placeholder="Description"
-                />
-                <button type="button" onClick={() => {
-                  const newAgenda = agenda.filter((_, i) => i !== index);
-                  setAgenda(newAgenda.length > 0 ? newAgenda : [{ start_time: '', end_time: '', description: '' }]);
-                }}>Remove</button>
-              </div>
-            ))}
-          </label>
-          <button type="button" onClick={() => setAgenda([...agenda, { start_time: '', end_time: '', description: '' }])}>Add Agenda Item</button>
+          <label>Agenda:</label>
+          {agenda.map((item, index) => (
+            <div key={index} className="agenda-item">
+              <input type="time" value={item.start_time} onChange={e => { const a = [...agenda]; a[index].start_time = e.target.value; setAgenda(a); }} />
+              <input type="time" value={item.end_time} onChange={e => { const a = [...agenda]; a[index].end_time = e.target.value; setAgenda(a); }} />
+              <input type="text" value={item.description} onChange={e => { const a = [...agenda]; a[index].description = e.target.value; setAgenda(a); }} placeholder="Description" />
+              <button type="button" onClick={() => { const a = agenda.filter((_, i) => i !== index); setAgenda(a.length > 0 ? a : [{ start_time: '', end_time: '', description: '' }]); }}>Remove</button>
+            </div>
+          ))}
+          <button type="button" className="add-btn" onClick={() => setAgenda([...agenda, { start_time: '', end_time: '', description: '' }])}>Add Agenda Item</button>
         </div>
-        <label>
+        <label className="full-width">
           Registration Link:
           <input type="url" value={registrationLink} onChange={e => setRegistrationLink(e.target.value)} />
         </label>
-        <label>
+        <label className="full-width">
           Ticket Info:
           <input type="text" value={ticketInfo} onChange={e => setTicketInfo(e.target.value)} />
         </label>
-        <label>
+        <label className="full-width">
           Description:
           <textarea value={description} onChange={e => setDescription(e.target.value)} required />
         </label>

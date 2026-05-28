@@ -2,8 +2,12 @@ import React from 'react';
 import './Hero.css';
 import img from '../images/plan_events_2.png';
 import { Link } from 'react-router-dom';
+import { useAuth } from '../contexts/AuthContext';
 
 const Hero = () => {
+  const { user } = useAuth();
+  const tryItFreeLink = (user?.role === 'admin' || user?.role === 'speaker') ? '/events/new' : '/events';
+
   return (
     <section className="hero">
       <div className="hero-container">
@@ -14,7 +18,7 @@ const Hero = () => {
           </p>
           <div className="hero-actions animate-on-scroll slide-up">
             <Link to="/events" className="btn-primary-large">Browse Events</Link>
-            <Link to="/events/new" className="btn-secondary-large">Try it Free</Link>
+            <Link to={tryItFreeLink} className="btn-secondary-large">Try it Free</Link>
           </div>
         </div>
         <div className="hero-image animate-on-scroll slide-up">

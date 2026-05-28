@@ -71,7 +71,7 @@ const EventList = () => {
     <div className="event-list">
       <header className="page-header">
         <video playsInline autoPlay loop muted className="header-video">
-          <source src={require('../videos/banner.mp4')} type="video/mp4" />
+          <source src="/src/videos/banner.mp4" type="video/mp4" />
         </video>
         <div className="header-left">
           <h1>Plan Events - Event Management</h1>
@@ -133,15 +133,25 @@ const EventList = () => {
           <div className="event-grid">
             {filteredEvents.map(event => (
               <div key={event.id} className="event-card">
-                {event.banner && <img src={event.banner.startsWith('http') ? event.banner : `http://localhost:5000/uploads/${event.banner}`} alt="Event Banner" className="event-banner" />}
-                <h3>{event.title}</h3>
-                <p>{event.description}</p>
-                <p><strong>Date:</strong> {event.date}</p>
-                <p><strong>Time:</strong> {event.time}</p>
-                <p><strong>Location:</strong> {event.location}</p>
-                <p><strong>Category:</strong> {event.category}</p>
-                <p><strong>Organizer:</strong> {event.organizer}</p>
-                <Link to={`/events/${event.id}`}>View Details</Link>
+                {event.banner && (
+                  <img
+                    src={event.banner.startsWith('http') ? event.banner : `http://localhost:5000/uploads/${event.banner}`}
+                    alt={event.title}
+                    className="event-banner"
+                    onError={e => { e.target.style.display = 'none'; }}
+                  />
+                )}
+                <div className="event-card-body">
+                  {event.category && <span className="event-category">{event.category}</span>}
+                  <h3>{event.title}</h3>
+                  <p className="event-description">{event.description}</p>
+                  <div className="event-meta">
+                    {event.date && <span>{event.date}{event.time ? ` · ${event.time}` : ''}</span>}
+                    {event.location && <span>{event.location}</span>}
+                    {event.organizer && <span>{event.organizer}</span>}
+                  </div>
+                  <Link to={`/events/${event.id}`} className="btn-view">View Details</Link>
+                </div>
               </div>
             ))}
           </div>

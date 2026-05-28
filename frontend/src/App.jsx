@@ -86,10 +86,17 @@ import AdminSettings from './components/AdminSettings';
 // Protected Route Component
 const ProtectedRoute = ({ children }) => {
   const { user, loading } = useAuth();
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+  if (loading) return <div>Loading...</div>;
   return user ? children : <Navigate to="/login" />;
+};
+
+// Only admin or speaker can create events
+const ProtectedEventCreateRoute = ({ children }) => {
+  const { user, loading } = useAuth();
+  if (loading) return <div>Loading...</div>;
+  if (!user) return <Navigate to="/login" />;
+  if (user.role !== 'admin' && user.role !== 'speaker') return <Navigate to="/events" />;
+  return children;
 };
 
 function App() {
@@ -139,7 +146,7 @@ function App() {
             </>
           } />
           <Route path="/events" element={<EventList />} />
-          <Route path="/events/new" element={<EventForm />} />
+          <Route path="/events/new" element={<ProtectedEventCreateRoute><EventForm /></ProtectedEventCreateRoute>} />
           <Route path="/events/:id" element={<EventDetails />} />
           <Route path="/events/:id/register" element={<RegistrationForm />} />
           <Route path="/products" element={<Products />} />
