@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCalendar, faHome, faUser, faHistory, faCog } from '@fortawesome/free-solid-svg-icons';
 import './Profile.css';
 
 const SpeakerProfile = () => {
@@ -199,15 +201,50 @@ const SpeakerProfile = () => {
 
   return (
     <div className="profile">
-      <nav className="sidebar">
-        <ul>
-          <li><Link to="/speaker/dashboard"><i className="fa fa-home"></i> Home</Link></li>
-          <li><Link to="/speaker/profile"><i className="fa fa-user"></i> Profile</Link></li>
-          <li><Link to="/speaker/talks"><i className="fa fa-calendar"></i> Upcoming Talks</Link></li>
-          <li><Link to="/speaker/past-events"><i className="fa fa-history"></i> Past Events</Link></li>
-          <li><Link to="/speaker/settings"><i className="fa fa-cog"></i> Settings</Link></li>
+      <div className="speaker-sidebar">
+        <div className="speaker-sidebar__logo">
+          <span className="speaker-sidebar__logo-text">PlanEvents</span>
+        </div>
+        <p className="speaker-sidebar__section-label">MAIN MENU</p>
+        <ul className="speaker-sidebar__menu">
+          <li className="speaker-sidebar__group">
+            <Link to="/speaker/dashboard" className="speaker-sidebar__item active">
+              <FontAwesomeIcon icon={faHome} className="speaker-sidebar__icon" />
+              <span className="speaker-sidebar__text">Dashboard</span>
+            </Link>
+          </li>
+          <li className="speaker-sidebar__group">
+            <Link to="/speaker/profile" className="speaker-sidebar__item">
+              <FontAwesomeIcon icon={faUser} className="speaker-sidebar__icon" />
+              <span className="speaker-sidebar__text">Profile</span>
+            </Link>
+          </li>
+          <li className="speaker-sidebar__group">
+            <Link to="/speaker/talks" className="speaker-sidebar__item">
+              <FontAwesomeIcon icon={faCalendar} className="speaker-sidebar__icon" />
+              <span className="speaker-sidebar__text">Upcoming Talks</span>
+            </Link>
+          </li>
+          <li className="speaker-sidebar__group">
+            <Link to="/speaker/past-events" className="speaker-sidebar__item">
+              <FontAwesomeIcon icon={faHistory} className="speaker-sidebar__icon" />
+              <span className="speaker-sidebar__text">Past Events</span>
+            </Link>
+          </li>
+          <li className="speaker-sidebar__group">
+            <Link to="/speaker/settings" className="speaker-sidebar__item">
+              <FontAwesomeIcon icon={faCog} className="speaker-sidebar__icon" />
+              <span className="speaker-sidebar__text">Settings</span>
+            </Link>
+          </li>
         </ul>
-      </nav>
+        <div className="speaker-sidebar__footer">
+          <Link to="/" className="speaker-sidebar__item speaker-sidebar__back">
+            <FontAwesomeIcon icon={faHome} className="speaker-sidebar__icon" />
+            <span className="speaker-sidebar__text">Back to Site</span>
+          </Link>
+        </div>
+      </div>
 
       <div className="main-content">
         <header className="headers">
