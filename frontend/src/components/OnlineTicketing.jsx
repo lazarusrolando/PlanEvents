@@ -48,8 +48,9 @@ const OnlineTicketing = () => {
 
   return (
     <div className="online-ticketing-container">
-      <h2>Online Ticketing</h2>
-      <p className="animate-on-scroll">Purchase tickets for your events securely and easily online.</p>
+      <span className="ticketing-eyebrow">Online Ticketing</span>
+      <h2>Select tickets for your event</h2>
+      <p className="animate-on-scroll">Choose an event, ticket type, and quantity before continuing into attendee registration.</p>
       <form onSubmit={handleSubmit} className="ticketing-form">
         <label>
           <strong style={{ color: 'red' }}>*</strong>Select Event:
@@ -83,7 +84,7 @@ const OnlineTicketing = () => {
         </div>
         <button type="submit" className="purchase-button">Proceed to Registration</button>
       </form>
-      <Link to="/dashboard" className="back-link">Back to Dashboard</Link>
+      <Link to="/ticketing" className="back-link">Back to Ticketing</Link>
     </div>
   );
 };

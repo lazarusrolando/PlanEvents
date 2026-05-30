@@ -1,25 +1,37 @@
 import React from 'react';
-import './VendorCoordination.css';
+import { FaClipboardList } from 'react-icons/fa';
+import ProductDetailPage from './ProductDetailPage';
 
-const VendorCoordination = () => {
-  return (
-    <section className="vendor-coordination-container">
-      <div className="vendor-coordination-content">
-        <h1>Vendor Coordination</h1>
-        <p>Coordinate with vendors seamlessly. Our platform facilitates communication, contract management, and performance tracking to ensure all parties are aligned.</p>
-        <div className="vendor-features">
-          <h2>Features</h2>
-          <ul>
-            <li>Centralized vendor database and contact management.</li>
-            <li>Automated contract generation and e-signatures.</li>
-            <li>Task assignment and progress tracking.</li>
-            <li>Payment processing and invoice management.</li>
-            <li>Feedback and rating system for vendors.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-  );
-};
+const VendorCoordination = () => (
+  <ProductDetailPage
+    eyebrow="Vendor Coordination"
+    title="Keep every vendor commitment visible and accountable"
+    description="Manage vendor responsibilities, contact details, contracts, deadlines, invoices, and performance notes alongside the event plan."
+    Icon={FaClipboardList}
+    highlights={[
+      { value: 'Vendor', label: 'records' },
+      { value: 'Contract', label: 'status' },
+      { value: 'Deadline', label: 'tracking' }
+    ]}
+    features={[
+      'Central vendor profiles for contacts, services, notes, files, and event assignments',
+      'Responsibility tracking for catering, AV, decor, staffing, transport, security, and more',
+      'Contract, invoice, approval, and payment status fields tied to the vendor record',
+      'Deadline and deliverable tracking so commitments do not disappear into email',
+      'Post-event notes that help teams evaluate vendor performance for future events'
+    ]}
+    bestFor={[
+      'Events involving multiple external partners',
+      'Teams coordinating contracts, deliverables, and invoices',
+      'Agencies managing vendor communication for clients',
+      'Organizations building a reusable vendor knowledge base'
+    ]}
+    workflow={[
+      'Create vendor records and define each partner responsibility for the event.',
+      'Track contracts, invoices, deadlines, and deliverables throughout planning.',
+      'Review performance notes after the event to improve future vendor decisions.'
+    ]}
+  />
+);
 
 export default VendorCoordination;

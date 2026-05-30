@@ -6,7 +6,7 @@ import { useAuth } from '../contexts/AuthContext';
 
 const Hero = () => {
   const { user } = useAuth();
-  const tryItFreeLink = (user?.role === 'admin' || user?.role === 'speaker') ? '/events/new' : '/events';
+  // const tryItFreeLink = (user?.role === 'admin' || user?.role === 'speaker') ? '/events/new' : '/events';
 
   return (
     <section className="hero">
@@ -18,7 +18,7 @@ const Hero = () => {
           </p>
           <div className="hero-actions animate-on-scroll slide-up">
             <Link to="/events" className="btn-primary-large">Browse Events</Link>
-            <Link to={tryItFreeLink} className="btn-secondary-large">Try it Free</Link>
+            <Link to="/contact" className="btn-secondary-large">Contact Us</Link>
           </div>
         </div>
         <div className="hero-image animate-on-scroll slide-up">

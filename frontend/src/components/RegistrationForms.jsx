@@ -28,8 +28,9 @@ const RegistrationForms = () => {
 
   return (
     <div className="registration-forms-container">
-      <h2>Registration Forms</h2>
-      <p className="animate-on-scroll">Complete your event registration with our simple form.</p>
+      <span className="ticketing-eyebrow">Registration Forms</span>
+      <h2>Capture attendee details</h2>
+      <p className="animate-on-scroll">Collect the core information needed to confirm the attendee and complete the ticket purchase.</p>
       <form onSubmit={handleSubmit} className="registration-form" noValidate>
         <label>
           <strong style={{ color: 'red', marginRight: '0.25rem' }}>*</strong>Name:

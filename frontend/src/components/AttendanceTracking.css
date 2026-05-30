@@ -1,7 +1,7 @@
 .attendance {
   display: flex;
   min-height: 100vh;
-  background-color: #ffffff;
+  background-color: #f5f7fb;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -96,7 +96,8 @@
   background-color: white;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 24px rgba(22, 32, 51, 0.06);
+  border: 1px solid #e1e8f0;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -108,8 +109,18 @@
 .headers-left h1 {
   margin: 0;
   font-size: 2rem;
-  color: #333;
+  color: #162033;
   text-align: center;
+}
+
+.ticketing-eyebrow {
+  display: inline-flex;
+  color: #ff6b35;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  margin-bottom: 0.85rem;
+  text-transform: uppercase;
 }
 
 .attendance-content {
@@ -147,10 +158,11 @@
 .attendees-table table {
   width: 100%;
   border-collapse: collapse;
-  background: #f9f9f9;
+  background: white;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 24px rgba(22, 32, 51, 0.06);
+  border: 1px solid #e1e8f0;
 }
 
 .attendees-table th,
@@ -166,7 +178,7 @@
 }
 
 .attendees-table th {
-  background: #007bff;
+  background: #162033;
   color: white;
   font-weight: bold;
 }
@@ -179,17 +191,17 @@
 }
 
 .status.pending {
-  background: #ffc107;
-  color: #333;
+  background: #fff0ea;
+  color: #b4481d;
 }
 
 .status.checked-in {
-  background: #28a745;
+  background: #0f766e;
   color: white;
 }
 
 .check-in-button {
-  background: #28a745;
+  background: #ff6b35;
   color: white;
   border: none;
   padding: 0.5rem 1rem;
@@ -199,7 +211,7 @@
 }
 
 .check-in-button:hover {
-  background: #218838;
+  background: #e55a2b;
 }
 
 @media (max-width: 768px) {

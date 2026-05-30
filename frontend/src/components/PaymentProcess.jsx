@@ -61,12 +61,13 @@ const PaymentProcess = () => {
 
   return (
     <div className="payment-process-container">
-      <h2>Payment Process</h2>
-      <p className="animate-on-scroll">Secure payment options for your tickets and registrations.</p>
+      <span className="ticketing-eyebrow">Payment Process</span>
+      <h2>Complete payment securely</h2>
+      <p className="animate-on-scroll">Choose a payment method and finalize the registration so the attendee can move into check-in tracking.</p>
       
       {step === 1 && (
         <div className="method-selection">
-          <h3>Select Payment Method</h3>
+          <h3>Select payment method</h3>
           <button
             type="button"
             className={`method-btn ${paymentMethod === 'card' ? 'selected' : ''}`}
@@ -93,7 +94,7 @@ const PaymentProcess = () => {
 
       {step === 2 && paymentMethod === 'card' && (
         <form onSubmit={handleSubmit} className="payment-form">
-          <h3>Enter Card Details</h3>
+          <h3>Enter card details</h3>
           <label>
             <strong style={{ color: 'red' }}>*</strong>Card Number:
             <input

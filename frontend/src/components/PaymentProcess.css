@@ -1,15 +1,27 @@
 .payment-process-container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 5rem 2rem;
   text-align: center;
   animation: fadeIn 0.5s ease-in;
+  background: #f5f7fb;
 }
 
 .payment-process-container h2 {
-  color: #333;
+  color: #162033;
   margin-bottom: 1rem;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
+  line-height: 1.18;
+}
+
+.ticketing-eyebrow {
+  display: inline-flex;
+  color: #ff6b35;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  margin-bottom: 0.85rem;
+  text-transform: uppercase;
 }
 
 .animate-on-scroll {
@@ -26,17 +38,19 @@
 .method-selection,
 .payment-form,
 .alternative-payment {
-  background: #f9f9f9;
+  background: white;
   padding: 2rem;
   border-radius: 8px;
   margin: 2rem 0;
+  border: 1px solid #e1e8f0;
+  box-shadow: 0 8px 24px rgba(22, 32, 51, 0.06);
 }
 
 .method-selection h3,
 .payment-form h3,
 .alternative-payment h3 {
   margin-bottom: 1.5rem;
-  color: #333;
+  color: #162033;
 }
 
 .method-btn {
@@ -44,17 +58,17 @@
   width: 100%;
   padding: 1rem;
   margin: 0.5rem 0;
-  border: 1px solid #ddd;
+  border: 1px solid #cfd8e3;
   background: white;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
   transition: background 0.3s, border-color 0.3s;
 }
 
 .method-btn:hover,
 .method-btn.selected {
-  background: #e9ecef;
-  border-color: #007bff;
+  background: #fff0ea;
+  border-color: #ff6b35;
 }
 
 .payment-form {
@@ -72,8 +86,8 @@
 
 .payment-form input {
   padding: 0.75rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  border: 1px solid #cfd8e3;
+  border-radius: 8px;
   font-size: 1rem;
   margin-top: 0.5rem;
 }
@@ -90,27 +104,27 @@
 .process-button {
   flex: 1;
   padding: 1rem;
-  border: 1px solid #ddd;
+  border: 1px solid #cfd8e3;
   background: white;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
   transition: background 0.3s;
 }
 
 .submit-button {
   flex: 1;
-  background: #28a745;
+  background: #ff6b35;
   color: white;
   padding: 1rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   font-size: 1.1rem;
   cursor: pointer;
   transition: background 0.3s;
 }
 
 .submit-button:hover {
-  background: #218838;
+  background: #e55a2b;
 }
 
 .back-button:hover,
@@ -121,7 +135,7 @@
 .back-link {
   display: inline-block;
   margin-top: 1rem;
-  color: #007bff;
+  color: #ff6b35;
   text-decoration: none;
   font-weight: bold;
 }
@@ -132,7 +146,7 @@
 
 @media (max-width: 768px) {
   .payment-process-container {
-    padding: 1rem;
+    padding: 2rem 1rem;
   }
 
   .method-selection,

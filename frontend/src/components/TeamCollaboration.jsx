@@ -1,40 +1,37 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Footer from './Footer';
-import './Products.css'; // Reuse styling
+import { FaUsers } from 'react-icons/fa';
+import ProductDetailPage from './ProductDetailPage';
 
-const TeamCollaboration = () => {
-  return (
-    <div className="App">
-      <div className="products-container">
-        <section className="hero-section">
-          <h1>Team Collaboration</h1>
-          <p>Enhance team productivity with seamless collaboration tools. Assign tasks, share updates, and communicate in real-time to keep everyone aligned.</p>
-          <Link to="/products" className="btn-primary">Back to Products</Link>
-        </section>
-
-        <section className="features-section">
-          <h2>Key Features</h2>
-          <ul>
-            <li>Task assignment and role-based permissions</li>
-            <li>Real-time chat and comment threads</li>
-            <li>Shared document and file management</li>
-            <li>Activity feeds and notifications</li>
-            <li>Integration with popular communication apps</li>
-          </ul>
-        </section>
-
-        <section className="pricing-section">
-          <h2>Pricing</h2>
-          <div className="pricing-info">
-            <p>Starting at $59/month. Supports unlimited team members.</p>
-            <Link to="/pricing-calculator" className="btn-primary">Calculate Your Plan</Link>
-          </div>
-        </section>
-      </div>
-      <Footer />
-    </div>
-  );
-};
+const TeamCollaboration = () => (
+  <ProductDetailPage
+    eyebrow="Team Collaboration"
+    title="Keep every event stakeholder working from the same page"
+    description="Bring planners, admins, speakers, vendors, and operations teams together around tasks, decisions, files, and status updates."
+    Icon={FaUsers}
+    highlights={[
+      { value: 'Shared', label: 'workspaces' },
+      { value: 'Role', label: 'visibility' },
+      { value: 'Fewer', label: 'status meetings' }
+    ]}
+    features={[
+      'Task ownership, due dates, and progress tracking for every event workstream',
+      'Shared notes and files for planning decisions, contracts, requirements, and runbooks',
+      'Role-aware collaboration so each team sees the details that matter to them',
+      'Activity history that makes changes and decisions easier to trace',
+      'Central updates that reduce scattered email threads and repeated check-ins'
+    ]}
+    bestFor={[
+      'Cross-functional event teams',
+      'Agencies working with clients and external partners',
+      'Speaker and vendor coordination workflows',
+      'Teams that need clear ownership and accountability'
+    ]}
+    workflow={[
+      'Invite team members and assign each workstream to a clear owner.',
+      'Centralize decisions, files, requirements, and task updates in the event workspace.',
+      'Review progress and blockers without chasing updates across separate tools.'
+    ]}
+  />
+);
 
 export default TeamCollaboration;

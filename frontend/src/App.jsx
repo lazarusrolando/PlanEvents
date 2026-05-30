@@ -163,7 +163,7 @@ function App() {
             <Route path="online" element={<OnlineTicketing />} />
             <Route path="registration" element={<RegistrationForms />} />
             <Route path="payment" element={<PaymentProcess />} />
-            <Route path="attendance" element={<AttendanceTracking />} />
+            <Route path="attendance" element={<ProtectedRoute><AttendanceTracking /></ProtectedRoute>} />
           </Route>
           <Route path="/about" element={<About />} />
           <Route path="/about/who-we-are" element={<About />} />

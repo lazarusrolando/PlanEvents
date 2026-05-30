@@ -1,15 +1,27 @@
 .ticketing-overview-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 5rem 2rem;
   text-align: center;
   animation: fadeIn 0.5s ease-in;
+  background: #f5f7fb;
 }
 
 .ticketing-overview-container h2 {
-  color: #333;
+  color: #162033;
   margin-bottom: 1rem;
-  font-size: 2.5rem;
+  font-size: 3rem;
+  line-height: 1.18;
+}
+
+.ticketing-eyebrow {
+  display: inline-flex;
+  color: #ff6b35;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  margin-bottom: 0.85rem;
+  text-transform: uppercase;
 }
 
 .animate-on-scroll {
@@ -26,40 +38,62 @@
 .overview-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  gap: 1.5rem;
   margin: 3rem 0;
 }
 
 .overview-card {
-  background: #f9f9f9;
-  padding: 2rem;
+  background: white;
+  padding: 1.5rem;
   border-radius: 8px;
   text-decoration: none;
-  color: inherit;
-  transition: transform 0.3s, box-shadow 0.3s;
-  border: 1px solid #ddd;
+  color: #1f2933;
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+  border: 1px solid #e1e8f0;
+  box-shadow: 0 8px 24px rgba(22, 32, 51, 0.06);
+  text-align: left;
 }
 
 .overview-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transform: translateY(-4px);
+  border-color: #ffb191;
+  box-shadow: 0 14px 34px rgba(22, 32, 51, 0.11);
+}
+
+.overview-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: #fff0ea;
+  color: #ff6b35;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
 }
 
 .overview-card h3 {
-  color: #007bff;
+  color: #162033;
   margin-bottom: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.35rem;
 }
 
 .overview-card p {
-  color: #666;
-  line-height: 1.5;
+  color: #556171;
+  line-height: 1.55;
+}
+
+.overview-card strong {
+  color: #ff6b35;
+  display: inline-block;
+  font-size: 0.92rem;
+  margin-top: 0.5rem;
 }
 
 .back-link {
   display: inline-block;
   margin-top: 1rem;
-  color: #007bff;
+  color: #ff6b35;
   text-decoration: none;
   font-weight: bold;
 }
@@ -70,7 +104,7 @@
 
 @media (max-width: 768px) {
   .ticketing-overview-container {
-    padding: 1rem;
+    padding: 2rem 1rem;
   }
 
   .overview-grid {

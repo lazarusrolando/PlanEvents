@@ -98,12 +98,13 @@ const AttendanceTracking = () => {
       <div className="main-content">
         <header className="headers">
           <div className="headers-left">
-            <h1>Attendance Tracking</h1>
+            <span className="ticketing-eyebrow">Attendance Tracking</span>
+            <h1>Monitor attendee check-ins</h1>
           </div>
         </header>
 
         <div className="attendance-content">
-          <p className="animate-on-scroll">Monitor and manage your event attendance.</p>
+          <p className="animate-on-scroll">Review registered events and mark attendees as checked in when they arrive.</p>
           <div className="attendees-table">
             <table>
               <thead>

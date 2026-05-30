@@ -1,25 +1,37 @@
 import React from 'react';
-import './LogisticsManagement.css';
+import { FaTruck } from 'react-icons/fa';
+import ProductDetailPage from './ProductDetailPage';
 
-const LogisticsManagement = () => {
-  return (
-    <section className="logistics-management-container">
-      <div className="logistics-management-content">
-        <h1>Logistics Management</h1>
-        <p>Handle all your event logistics in one place. From inventory tracking to shipment coordination, our tools ensure smooth operations behind the scenes.</p>
-        <div className="logistics-features">
-          <h2>Features</h2>
-          <ul>
-            <li>Real-time inventory and stock monitoring.</li>
-            <li>Shipment tracking with integrated carriers.</li>
-            <li>Timeline and milestone management.</li>
-            <li>Resource allocation and budgeting tools.</li>
-            <li>Automated alerts for potential delays.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-  );
-};
+const LogisticsManagement = () => (
+  <ProductDetailPage
+    eyebrow="Logistics Management"
+    title="Run the behind-the-scenes work that makes events happen"
+    description="Coordinate equipment, shipments, staffing, supplies, inventory, setup windows, and delivery checkpoints from one logistics workspace."
+    Icon={FaTruck}
+    highlights={[
+      { value: 'Inventory', label: 'visibility' },
+      { value: 'Delivery', label: 'checkpoints' },
+      { value: 'Day-of', label: 'coordination' }
+    ]}
+    features={[
+      'Inventory tracking for event supplies, equipment, signage, kits, and materials',
+      'Delivery windows, pickup times, loading requirements, and shipment status notes',
+      'Staffing and resource planning for setup, registration, support, and teardown',
+      'Operational milestones that connect logistics work to the event timeline',
+      'Alerts and ownership notes for delayed, blocked, or high-priority logistics tasks'
+    ]}
+    bestFor={[
+      'Operations-heavy events with many moving parts',
+      'Teams coordinating deliveries and setup timelines',
+      'Planners managing equipment, inventory, and staffing',
+      'Events where day-of logistics need clear accountability'
+    ]}
+    workflow={[
+      'List the materials, equipment, staff, and deliveries needed for the event.',
+      'Assign owners and track each logistics item against the event timeline.',
+      'Monitor day-of readiness and resolve blocked items before they affect guests.'
+    ]}
+  />
+);
 
 export default LogisticsManagement;

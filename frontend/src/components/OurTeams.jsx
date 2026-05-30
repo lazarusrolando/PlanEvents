@@ -4,25 +4,10 @@ import './OurTeams.css';
 const OurTeams = () => {
   const teams = [
     {
-      name: 'Engineering',
-      description: 'Our engineering team builds and maintains the core platform, ensuring scalability and innovation.',
-      members: ['Alice Johnson', 'Bob Smith', 'Charlie Brown']
+      name: 'Owner',
+      description: 'The owner leads the company and makes strategic decisions.',
+      members: ['Lazarus Rolando']
     },
-    {
-      name: 'Marketing',
-      description: 'The marketing team drives awareness and engagement for Plan Events.',
-      members: ['Diana Prince', 'Eve Adams']
-    },
-    {
-      name: 'Event Planning',
-      description: 'Experts in event management who provide insights and support.',
-      members: ['Frank Miller', 'Grace Lee']
-    },
-    {
-      name: 'Administration',
-      description: 'Handles operations and ensures smooth day-to-day activities.',
-      members: ['Henry Wilson', 'Ivy Chen']
-    }
   ];
 
   return (
