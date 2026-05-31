@@ -12,7 +12,6 @@
 <p align="center">
   <a href="https://react.dev/"><img src="https://img.shields.io/badge/React-19.2.6-blue.svg" alt="React Badge"></a>
   <a href="https://vite.dev/"><img src="https://img.shields.io/badge/Vite-8.0.14-purple.svg" alt="Vite Badge"></a>
-  <a href="https://react.dev/"><img src="https://img.shields.io/badge/React.js-19.2.6-blue.svg" alt="React Badge"></a>
   <a href="https://nodejs.org/"><img src="https://img.shields.io/badge/Node.js-24.10.0-green.svg" alt="Node.js Badge"></a>
   <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.14.0-yellow.svg" alt="Python Badge"></a>
   <a href="https://flask.palletsprojects.com/"><img src="https://img.shields.io/badge/Flask-3.1.2-blue.svg" alt="Flask Badge"></a>
