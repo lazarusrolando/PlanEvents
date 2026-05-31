@@ -10,19 +10,16 @@
 </p>
 
 <p align="center">
-<<<<<<< HEAD
   <a href="https://react.dev/"><img src="https://img.shields.io/badge/React-19.2.6-blue.svg" alt="React Badge"></a>
   <a href="https://vite.dev/"><img src="https://img.shields.io/badge/Vite-8.0.14-purple.svg" alt="Vite Badge"></a>
   <a href="https://nodejs.org/"><img src="https://img.shields.io/badge/Node.js-Express-green.svg" alt="Node.js Badge"></a>
   <a href="https://flask.palletsprojects.com/"><img src="https://img.shields.io/badge/Flask-API-blue.svg" alt="Flask Badge"></a>
   <a href="https://www.sqlite.org/"><img src="https://img.shields.io/badge/SQLite-Database-green.svg" alt="SQLite Badge"></a>
-=======
   <a href="https://react.dev/"><img src="https://img.shields.io/badge/React.js-19.2.6-blue.svg" alt="React Badge"></a>
   <a href="https://nodejs.org/"><img src="https://img.shields.io/badge/Node.js-24.10.0-green.svg" alt="Node.js Badge"></a>
   <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.14.0-yellow.svg" alt="Python Badge"></a>
   <a href="https://flask.palletsprojects.com/"><img src="https://img.shields.io/badge/Flask-3.1.2-blue.svg" alt="Flask Badge"></a>
   <a href="https://www.sqlite.org/"><img src="https://img.shields.io/badge/SQLite-3.50.4-green.svg" alt="SQLite Badge"></a>
->>>>>>> 83ef0ea7e2a3c9b3107f8871a997e265e617025b
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT License Badge"></a>
 </p>
 
